@@ -39,27 +39,30 @@ function geraBola(corBola, valor){
 function estourar(elemento){
 	var valor = parseInt( elemento.innerHTML );
 	var qualBola = elemento.getAttribute('class');
-	if(qualBola == 'bola_gold bolinha'){
+
+	if(qualBola == 'bola_gold bolinha'){ // verifica se é a bola dourada (coringa que estoura todas bolas)
 
 		var todasBolas = document.getElementsByClassName('bolinha');
-		var contador;
+		console.log(todasBolas);
+		var contador = 0;
 		for(contador = 0; todasBolas.length; contador++){
 			
 			tela.removeChild(todasBolas[contador]);
 		}	
+
+
 		
-
-
 		totalBolas--;
 		document.getElementById('total_bolas').innerHTML = totalBolas;
 		pontos += valor;
 		document.getElementById('placar').innerHTML = pontos;
-	} else {
-		tela.removeChild(elemento);
-		totalBolas--;
-		document.getElementById('total_bolas').innerHTML = totalBolas;
-		pontos += valor;
-		document.getElementById('placar').innerHTML = pontos;
+
+	} else {  // se não for a bola dourada , ou seja qualquer outra bola comum
+		tela.removeChild(elemento); // remove a bola clicada da tela
+		totalBolas--; // adiciona mais uma no total de bolas
+		document.getElementById('total_bolas').innerHTML = totalBolas; // atualiza a visualização do total de bolas na tela
+		pontos += valor; // soma o valor da bola atual no total
+		document.getElementById('placar').innerHTML = pontos; // atualiza a visualização do total de pontos na tela
 	}
 
 }
