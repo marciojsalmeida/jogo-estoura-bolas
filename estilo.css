@@ -1,0 +1,129 @@
+
+.header{
+	display: flex;
+	justify-content: space-around;
+	margin:auto;
+	padding: 2px;
+	width:800px;
+	height: auto;
+	border:1px solid #000000;
+
+}
+#placar{
+	
+}
+
+#total_bolas{
+	height: 50px;
+	width: 70px;
+	border:1px solid #000000;
+	font-size: 30px;
+	text-align: center;
+	line-height: 50px;
+	
+}
+
+#tela{
+	background-color: #EBEBEB; 
+	margin:auto;
+	padding: 2px;
+	width:800px;
+	height: 500px;
+	border: 1px solid #000000;
+	position: relative;	
+	
+}
+.bola_preta{
+	font-weight: bold;
+	color: #ffffff;
+	text-align: center;
+	line-height: 50px;
+	border:1px solid #ffffff;
+	width:50px;
+	height:50px;
+	background-color:#000000;
+	border-radius:25px;
+	position: absolute;
+}
+
+.bola_vermelha{
+	font-weight: bold;
+	text-align: center;
+	line-height: 50px;
+	border:1px solid #000000;
+	width:50px;
+	height:50px;
+	background-color:#ff0000;
+	border-radius:25px;
+	position: absolute;
+}
+
+.bola_verde{
+	font-weight: bold;
+	text-align: center;
+	line-height: 50px;
+	border:1px solid #000000;
+	width:50px;
+	height:50px;
+	background-color:#00ff00;
+	border-radius:25px;
+	position: absolute;
+}
+.bola_gold{
+	font-weight: bold;
+	text-align: center;
+	line-height: 50px;
+	border:1px solid #ff0000;
+	width:50px;
+	height:50px;
+	background-color:gold;
+	border-radius:25px;
+	position: absolute;
+}
+
+@media (max-width: 500px){
+	.header{
+
+		font-size: 20px;
+		align-items: center;
+	}
+
+	#tela{
+		border:none;
+		background-color: #ffffff;
+	}	
+
+
+	h1 {
+		font-size:50px;	
+	}
+
+	.bola_preta{
+		width: 100px;
+		height: 100px;
+		border-radius:50px;
+		line-height: 100px;
+		font-size: 30px;
+	}
+	.bola_vermelha{
+		width: 100px;
+		height: 100px;
+		border-radius:50px;
+		line-height: 100px;
+		font-size: 30px;
+	}
+	.bola_verde{
+		width: 100px;
+		height: 100px;
+		border-radius:50px;
+		line-height: 100px;
+		font-size: 30px;
+	}
+	.bola_gold{
+		width: 100px;
+		height: 100px;
+		border-radius:50px;
+		line-height: 100px;
+		font-size: 30px;
+	}
+}
