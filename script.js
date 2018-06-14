@@ -1,6 +1,15 @@
 var totalBolas = 0;
 var pontos = 0;
 
+function iniciar(){
+	setInterval(addBola, 1000);
+	var tela = document.querySelector("#tela");
+	tela.style.cursor = "crosshair"; // deixa o mouse como se fosse uma mira
+}
+
+
+
+
 
 function addBola(){
 
@@ -30,7 +39,7 @@ function geraBola(corBola, valor){
 
 	bola.setAttribute('style', 'left:'+p1+'px;top:'+p2+'px;');
 	bola.setAttribute('onclick', 'estourar(this);');
-	var tela = document.querySelector("#tela");
+	
 	tela.appendChild(bola);
 	totalBolas++;
 	document.getElementById('total_bolas').innerHTML = totalBolas;
@@ -43,16 +52,11 @@ function estourar(elemento){
 	if(qualBola == 'bola_gold bolinha'){ // verifica se é a bola dourada (coringa que estoura todas bolas)
 
 		var todasBolas = document.getElementsByClassName('bolinha');
-		console.log(todasBolas);
-		var contador = 0;
-		for(contador = 0; todasBolas.length; contador++){
-			
-			tela.removeChild(todasBolas[contador]);
-		}	
+		while(tela.firstChild){ // verifica se a tela tem alguma bola
+			tela.removeChild(tela.firstChild); //enquanto a tela tiver bola ela remove a proxima
+		}
 
-
-		
-		totalBolas--;
+		totalBolas = 0;
 		document.getElementById('total_bolas').innerHTML = totalBolas;
 		pontos += valor;
 		document.getElementById('placar').innerHTML = pontos;
@@ -65,9 +69,4 @@ function estourar(elemento){
 		document.getElementById('placar').innerHTML = pontos; // atualiza a visualização do total de pontos na tela
 	}
 
-}
-
-
-function iniciar(){
-	setInterval(addBola, 1000);
 }
