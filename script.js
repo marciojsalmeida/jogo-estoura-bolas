@@ -52,10 +52,11 @@ function estourar(elemento){
 	if(qualBola == 'bola_gold bolinha'){ // verifica se é a bola dourada (coringa que estoura todas bolas)
 
 		var todasBolas = document.getElementsByClassName('bolinha');
+
 		while(tela.firstChild){ // verifica se a tela tem alguma bola
 			tela.removeChild(tela.firstChild); //enquanto a tela tiver bola ela remove a proxima
 		}
-
+		
 		totalBolas = 0;
 		document.getElementById('total_bolas').innerHTML = totalBolas;
 		pontos += valor;
