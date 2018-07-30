@@ -8,4 +8,4 @@ são gerada 1 bola a cada 1 segundo, e vão enchendo a tela. devemos clicar e es
 
 A bola dourada estoura todas as bolas da tela.
 
-Pode ser testado no endereço : http://www.xp5.com.br/jogo-estoura-bolas/
+Pode ser testado no endereço : http://www.xp5.com.br/modelos/jogos/jogo-estoura-bolas
